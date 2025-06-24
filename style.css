@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    color: black;
+    background-color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.main-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+}
+.box{
+    flex: 1 1 300px;
+    max-width: 400px;
+    width: 100%;
+    min-height: auto;
+    background-color: rgb(255,255,255,0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+
+.clock {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    min-width: 12ch;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+button:hover{
+    background-color: #ddd;
+}
+body.dark-mode{
+    color: white;
+    background-color: #121212;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark-mode .box {
+  background-color: #333;
+  color: white;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+body.dark-mode button{
+    background-color: rgba(0, 0, 0, 0.365);
+    color: white;
+}
+body.dark-mode button:hover{
+    background-color: #444;
+    color: white;
+}
+.no-transition * {
+  transition: none !important;
+}
+
+.button-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+/*css for stopwatch*/
+.stopwatch-box{
+    min-width: 12ch;
+}
+#stopwatch-time{
+    font-size: 3rem;
+    transition: opacity 0.3s ease-in;
+}
+
+#millisec{
+    font-size: 1.8em;    
+    margin-top: -0.4rem;
+    margin-bottom: 0.2rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in; 
+}
+.blink{
+    opacity: 0;
+    transition: opacity 0.01s ease-out;
+}
+
+
+.clock,
+#stopwatch-time {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+#12hr {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+#stop-resume{
+    min-width: 7rem;
+}
+
